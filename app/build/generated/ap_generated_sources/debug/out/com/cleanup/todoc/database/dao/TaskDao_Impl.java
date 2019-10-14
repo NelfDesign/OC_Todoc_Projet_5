@@ -147,15 +147,16 @@ public class TaskDao_Impl implements TaskDao {
           final List<Task> _result = new ArrayList<Task>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final Task _item;
-            final long _tmpId;
-            _tmpId = _cursor.getLong(_cursorIndexOfId);
             final long _tmpProjectId;
             _tmpProjectId = _cursor.getLong(_cursorIndexOfProjectId);
             final String _tmpName;
             _tmpName = _cursor.getString(_cursorIndexOfName);
             final long _tmpCreationTimestamp;
             _tmpCreationTimestamp = _cursor.getLong(_cursorIndexOfCreationTimestamp);
-            _item = new Task(_tmpId,_tmpProjectId,_tmpName,_tmpCreationTimestamp);
+            _item = new Task(_tmpProjectId,_tmpName,_tmpCreationTimestamp);
+            final long _tmpId;
+            _tmpId = _cursor.getLong(_cursorIndexOfId);
+            _item.setId(_tmpId);
             _result.add(_item);
           }
           return _result;

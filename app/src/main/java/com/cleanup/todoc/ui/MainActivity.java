@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
      * List of all current tasks of the application
      */
     @NonNull
-    private final ArrayList<Task> tasks = new ArrayList<>();
+    private final List<Task> tasks = new ArrayList<>();
 
     /**
      * The adapter which handles the list of tasks
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
      * Dialog to create a new task
      */
     @Nullable
-    public AddTaskDialog dialog = null;
+    public AlertDialog dialog = null;
 
     /**
      * EditText that allows user to set the name of a task
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
     private void configureViewModel(){
         ViewModelFactory mViewModelFactory = Injection.provideViewModelFactory(this);
         this.mTaskViewModel = ViewModelProviders.of(this, mViewModelFactory).get(TaskViewModel.class);
-       // this.mTaskViewModel.init(USER_ID);
+        this.mTaskViewModel.init();
     }
 
     // Configure RecyclerView
@@ -175,13 +175,8 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
             }
             // If both project and name of the task have been set
             else if (taskProject != null) {
-                // TODO: Replace this by id of persisted task
-                long id = (long) (Math.random() * 50000);
 
-
-                Task task = new Task(
-                        id,
-                        taskProject.getId(),
+                Task task = new Task(taskProject.getId(),
                         taskName,
                         new Date().getTime()
                 );
@@ -205,21 +200,11 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
      * Shows the Dialog for adding a Task
      */
     private void showAddTaskDialog() {
-        dialog = new AddTaskDialog.AddTaskDialogListener() {
-            @Override
-            public void onPositiveClick() {
+        final AlertDialog dialog = this.getAddTaskDialog();
+        dialog.show();
 
-            }
-
-            @Override
-            public void onNegativeClick() {
-            }
-        };
-
-        dialog.show(getSupportFragmentManager(), "dialog");
-
-        dialogEditText = findViewById(R.id.txt_task_name);
-        dialogSpinner = findViewById(R.id.project_spinner);
+        dialogEditText = dialog.findViewById(R.id.txt_task_name);
+        dialogSpinner = dialog.findViewById(R.id.project_spinner);
 
        Utils.populateDialogSpinner(dialogSpinner, allProjects, this);
     }
@@ -239,6 +224,8 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
      * Updates the list of tasks in the UI
      */
     private void updateTasks() {
+        //TODO
+        //tasks = mTaskViewModel.getAllTask();
         if (tasks.size() == 0) {
             lblNoTasks.setVisibility(View.VISIBLE);
             listTasks.setVisibility(View.GONE);
@@ -269,7 +256,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
      *
      * @return the dialog allowing the user to create a new task
      */
-    /*  @NonNull
+     @NonNull
         private AlertDialog getAddTaskDialog() {
         final AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this, R.style.Dialog);
 
@@ -293,6 +280,6 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
             button.setOnClickListener(view -> MainActivity.this.onPositiveButtonClick(dialog));
         });
         return dialog;
-    }*/
+    }
 
 }

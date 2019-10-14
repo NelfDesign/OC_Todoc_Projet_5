@@ -20,6 +20,9 @@ public interface ProjectDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void createProject(Project project);
 
+    @Query("SELECT * FROM project")
+    LiveData<List<Project>> getProjects();
+
     @Query("SELECT * FROM Project WHERE id = :projectId")
     LiveData<Project> getProject(long projectId);
 

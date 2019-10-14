@@ -25,7 +25,8 @@ public class TaskViewModel extends ViewModel {
 
     //DATA
     @Nullable
-    private LiveData<Project> project;
+    private LiveData<List<Project>> projects;
+    ;
 
     public TaskViewModel(ProjectDataRepository projectDataRepository, TaskDataRepository taskDataRepository, Executor executor) {
         this.mProjectDataRepository = projectDataRepository;
@@ -33,17 +34,22 @@ public class TaskViewModel extends ViewModel {
         this.mExecutor = executor;
     }
 
-    public void init(long userId) {
-        if (this.project != null) {
-            return;
+    public void init() {
+        // PROJECTS
+        if (this.projects == null) {
+            this.projects = this.mProjectDataRepository.getProjects();
         }
-        project = mProjectDataRepository.getProject(userId);
     }
 
     // task
     public LiveData<List<Task>> getTask(long taskId){
         return mTaskDataRepository.getTask(taskId) ;
     }
+
+    public LiveData<List<Task>> getAllTask(){
+        return mTaskDataRepository.getAllTasks() ;
+    }
+
     public void createTask(final Task task) {
         mExecutor.execute(() -> {
             mTaskDataRepository.createTask(task);

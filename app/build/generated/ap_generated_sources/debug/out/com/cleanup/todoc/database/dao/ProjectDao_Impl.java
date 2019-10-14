@@ -13,6 +13,8 @@ import com.cleanup.todoc.model.Project;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @SuppressWarnings("unchecked")
@@ -82,6 +84,54 @@ public class ProjectDao_Impl implements ProjectDao {
     } finally {
       __db.endTransaction();
     }
+  }
+
+  @Override
+  public LiveData<List<Project>> getProjects() {
+    final String _sql = "SELECT * FROM project";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return new ComputableLiveData<List<Project>>() {
+      private Observer _observer;
+
+      @Override
+      protected List<Project> compute() {
+        if (_observer == null) {
+          _observer = new Observer("project") {
+            @Override
+            public void onInvalidated(@NonNull Set<String> tables) {
+              invalidate();
+            }
+          };
+          __db.getInvalidationTracker().addWeakObserver(_observer);
+        }
+        final Cursor _cursor = __db.query(_statement);
+        try {
+          final int _cursorIndexOfId = _cursor.getColumnIndexOrThrow("id");
+          final int _cursorIndexOfName = _cursor.getColumnIndexOrThrow("name");
+          final int _cursorIndexOfColor = _cursor.getColumnIndexOrThrow("color");
+          final List<Project> _result = new ArrayList<Project>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final Project _item;
+            final long _tmpId;
+            _tmpId = _cursor.getLong(_cursorIndexOfId);
+            final String _tmpName;
+            _tmpName = _cursor.getString(_cursorIndexOfName);
+            final int _tmpColor;
+            _tmpColor = _cursor.getInt(_cursorIndexOfColor);
+            _item = new Project(_tmpId,_tmpName,_tmpColor);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    }.getLiveData();
   }
 
   @Override

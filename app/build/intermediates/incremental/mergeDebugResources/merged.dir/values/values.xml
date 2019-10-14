@@ -442,6 +442,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="add">Ajouter</string>
     <string name="add_task">Ajouter une tâche</string>
+    <string name="annuler">Annuler</string>
     <string name="app_name">Todoc</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
