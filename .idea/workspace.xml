@@ -7,123 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df4ae91b-ef49-4006-8f90-db869b07c1ac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_0_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_0_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_0_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_0_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_10_2_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_annotations_10_2_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_runtime_10_2_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/com/cleanup/todoc/database/dao/ProjectDao_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/com/cleanup/todoc/database/dao/ProjectDao_Impl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/com/cleanup/todoc/database/dao/TaskDao_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/com/cleanup/todoc/database/dao/TaskDao_Impl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/com/cleanup/todoc/test/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/com/cleanup/todoc/test/BuildConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/ProjectDao_Impl$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/ProjectDao_Impl$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/ProjectDao_Impl$4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/ProjectDao_Impl$4$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/ProjectDao_Impl$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/ProjectDao_Impl$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/ProjectDao_Impl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/ProjectDao_Impl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/TaskDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/TaskDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/TaskDao_Impl$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/TaskDao_Impl$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/TaskDao_Impl$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/TaskDao_Impl$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/TaskDao_Impl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/TaskDao_Impl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/injections/ViewModelFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/injections/ViewModelFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Project.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/SortMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/SortMethod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Task$TaskAZComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Task$TaskAZComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Task$TaskOldComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Task$TaskOldComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Task$TaskRecentComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Task$TaskRecentComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Task$TaskZAComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Task$TaskZAComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/model/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/repositories/ProjectDataRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/repositories/ProjectDataRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/repositories/TaskDataRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/repositories/TaskDataRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/MainActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/MainActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/MainActivity$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/TaskViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/TaskViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/TasksAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/ui/TasksAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/jacoco_instrumented_classes/debug/jacocoDebug/out/com/cleanup/todoc/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/ProjectDao_Impl$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/ProjectDao_Impl$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/ProjectDao_Impl$4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/ProjectDao_Impl$4$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/ProjectDao_Impl$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/ProjectDao_Impl$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/ProjectDao_Impl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/ProjectDao_Impl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/TaskDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/TaskDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/TaskDao_Impl$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/TaskDao_Impl$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/TaskDao_Impl$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/TaskDao_Impl$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/TaskDao_Impl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/TaskDao_Impl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/injections/ViewModelFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/injections/ViewModelFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Project.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/SortMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/SortMethod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Task$TaskAZComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Task$TaskAZComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Task$TaskOldComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Task$TaskOldComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Task$TaskRecentComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Task$TaskRecentComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Task$TaskZAComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Task$TaskZAComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/model/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/repositories/ProjectDataRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/repositories/ProjectDataRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/repositories/TaskDataRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/repositories/TaskDataRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/MainActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/MainActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/MainActivity$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/TaskViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/TaskViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/TasksAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/ui/TasksAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/cleanup/todoc/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debugAndroidTest/manifest-merger-blame-debug-androidTest-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debugAndroidTest/manifest-merger-blame-debug-androidTest-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/ProjectDao_Impl$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/ProjectDao_Impl$3.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/ProjectDao_Impl$4$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/ProjectDao_Impl$4$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/ProjectDao_Impl$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/ProjectDao_Impl$4.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/ProjectDao_Impl.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/ProjectDao_Impl.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/TaskDao.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/TaskDao.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/TaskDao_Impl$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/TaskDao_Impl$3.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/TaskDao_Impl$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/TaskDao_Impl$4.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/TaskDao_Impl.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/TaskDao_Impl.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase$1$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/injections/ViewModelFactory.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/injections/ViewModelFactory.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Project.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Project.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/SortMethod.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/SortMethod.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Task$TaskAZComparator.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Task$TaskAZComparator.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Task$TaskOldComparator.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Task$TaskOldComparator.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Task$TaskRecentComparator.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Task$TaskRecentComparator.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Task$TaskZAComparator.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Task$TaskZAComparator.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Task.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/model/Task.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/repositories/ProjectDataRepository.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/repositories/ProjectDataRepository.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/repositories/TaskDataRepository.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/repositories/TaskDataRepository.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/MainActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/MainActivity$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/MainActivity$2.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/MainActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/TaskViewModel.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/TaskViewModel.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/TasksAdapter$TaskViewHolder.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/TasksAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/ui/TasksAdapter.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/utils/Utils.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/cleanup/todoc/utils/Utils.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/database/dao/ProjectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/database/dao/ProjectDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/database/dao/classeDatabase/TodocDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/injections/ViewModelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/injections/ViewModelFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/SortMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/SortMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/repositories/ProjectDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/repositories/ProjectDataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/TaskViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/TaskViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/TasksAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/TasksAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/utils/Utils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -180,25 +86,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="42" column="96" selection-start-line="42" selection-start-column="96" selection-end-line="42" selection-end-column="96" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="621">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="43" column="68" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -232,7 +132,6 @@
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/injections/Injection.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/AddTaskDialog.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/database/dao/TaskDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/repositories/TaskDataRepository.java" />
@@ -246,15 +145,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/Project.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/utils/Utils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/TasksAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivity.java" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -266,7 +159,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -288,7 +181,26 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OC_todoc-master_Projet_5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="OC_todoc-master_Projet_5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+            </path>
+            <path>
+              <item name="OC_todoc-master_Projet_5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,7 +212,13 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="F:/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SaveMyTrip" />
+    <property name="project.structure.last.edited" value="SDK Location" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -422,7 +340,7 @@
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.50418997" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32960895" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32960895" />
       <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="9" />
@@ -435,10 +353,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/cleanup/todoc/MainActivityInstrumentedTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -625,20 +539,21 @@
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="42" column="96" selection-start-line="42" selection-start-column="96" selection-end-line="42" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="43" column="68" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
+        <state relative-caret-position="782">
+          <caret line="34" column="60" lean-forward="true" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>

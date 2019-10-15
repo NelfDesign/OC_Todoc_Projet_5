@@ -26,8 +26,6 @@ import com.cleanup.todoc.model.SortMethod;
 import com.cleanup.todoc.model.Task;
 import com.cleanup.todoc.utils.Utils;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
