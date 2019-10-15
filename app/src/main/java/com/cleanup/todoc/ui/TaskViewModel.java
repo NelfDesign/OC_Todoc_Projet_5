@@ -26,7 +26,6 @@ public class TaskViewModel extends ViewModel {
     //DATA
     @Nullable
     private LiveData<List<Project>> projects;
-    ;
 
     public TaskViewModel(ProjectDataRepository projectDataRepository, TaskDataRepository taskDataRepository, Executor executor) {
         this.mProjectDataRepository = projectDataRepository;
@@ -66,5 +65,9 @@ public class TaskViewModel extends ViewModel {
         mExecutor.execute(() -> {
             mTaskDataRepository.updateTask(task);
         });
+    }
+
+    public LiveData<List<Project>> getAllProjects(){
+        return this.projects;
     }
 }

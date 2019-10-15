@@ -14,8 +14,6 @@ import com.cleanup.todoc.database.dao.TaskDao;
 import com.cleanup.todoc.model.Project;
 import com.cleanup.todoc.model.Task;
 
-import java.util.concurrent.Executors;
-
 /**
  * Created by Nelfdesign at 11/10/2019
  * com.cleanup.todoc.database.dao.classeDatabase
@@ -30,51 +28,39 @@ public abstract class TodocDatabase extends RoomDatabase {
     public abstract ProjectDao mProjectDao();
     public abstract TaskDao mTaskDao();
 
+    //Field
+    private static Project[] projects = Project.getAllProjects();
+
     //Instance
     public static TodocDatabase getInstance(Context context){
         if (INSTANCE == null) {
             synchronized (TodocDatabase.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = buildDatabase(context);
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+                            TodocDatabase.class, "Todoc.db")
+                            .addCallback(prepopulateDatabase())
+                            .build();
                 }
             }
         }
         return INSTANCE;
     }
 
-    /*private static Callback prepopulateDatabase(final Context context){
+    private static Callback prepopulateDatabase() {
         return new Callback() {
 
             @Override
             public void onCreate(@NonNull SupportSQLiteDatabase db) {
                 super.onCreate(db);
 
-                Executors.newSingleThreadScheduledExecutor().execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        getInstance(context).mProjectDao().insertAll(Project.getAllProjects());
-                    }
-                });
+                for (Project p : projects) {
+                    ContentValues contentValues = new ContentValues();
+                    contentValues.put("name", p.getName());
+                    contentValues.put("color", p.getColor());
+
+                    db.insert("project", OnConflictStrategy.IGNORE, contentValues);
+                }
             }
         };
-    }*/
-    private static TodocDatabase buildDatabase(final Context context) {
-        return Room.databaseBuilder(context,
-                TodocDatabase.class, "my-database")
-                .addCallback(new Callback() {
-                    @Override
-                    public void onCreate(@NonNull SupportSQLiteDatabase db) {
-                        super.onCreate(db);
-                        Executors.newSingleThreadScheduledExecutor().execute(new Runnable() {
-                            @Override
-                            public void run() {
-                                for (Project p : Project.getAllProjects()){
-                                    getInstance(context).mProjectDao().insertProject(p);
-                                }
-                            }
-                        });
-                    }
-                })
-                .build();
     }
 }

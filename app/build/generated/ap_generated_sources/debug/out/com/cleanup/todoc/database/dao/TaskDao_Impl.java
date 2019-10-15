@@ -71,7 +71,7 @@ public class TaskDao_Impl implements TaskDao {
     this.__preparedStmtOfDeleteTask = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "DELETE FROM Task WHERE id = ?";
+        final String _query = "DELETE FROM task WHERE id = ?";
         return _query;
       }
     };
@@ -120,7 +120,7 @@ public class TaskDao_Impl implements TaskDao {
 
   @Override
   public LiveData<List<Task>> getTask(long taskId) {
-    final String _sql = "SELECT * FROM Task WHERE id = ?";
+    final String _sql = "SELECT * FROM task WHERE id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     _statement.bindLong(_argIndex, taskId);
@@ -130,7 +130,59 @@ public class TaskDao_Impl implements TaskDao {
       @Override
       protected List<Task> compute() {
         if (_observer == null) {
-          _observer = new Observer("Task") {
+          _observer = new Observer("task") {
+            @Override
+            public void onInvalidated(@NonNull Set<String> tables) {
+              invalidate();
+            }
+          };
+          __db.getInvalidationTracker().addWeakObserver(_observer);
+        }
+        final Cursor _cursor = __db.query(_statement);
+        try {
+          final int _cursorIndexOfId = _cursor.getColumnIndexOrThrow("id");
+          final int _cursorIndexOfProjectId = _cursor.getColumnIndexOrThrow("projectId");
+          final int _cursorIndexOfName = _cursor.getColumnIndexOrThrow("name");
+          final int _cursorIndexOfCreationTimestamp = _cursor.getColumnIndexOrThrow("creationTimestamp");
+          final List<Task> _result = new ArrayList<Task>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final Task _item;
+            final long _tmpProjectId;
+            _tmpProjectId = _cursor.getLong(_cursorIndexOfProjectId);
+            final String _tmpName;
+            _tmpName = _cursor.getString(_cursorIndexOfName);
+            final long _tmpCreationTimestamp;
+            _tmpCreationTimestamp = _cursor.getLong(_cursorIndexOfCreationTimestamp);
+            _item = new Task(_tmpProjectId,_tmpName,_tmpCreationTimestamp);
+            final long _tmpId;
+            _tmpId = _cursor.getLong(_cursorIndexOfId);
+            _item.setId(_tmpId);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    }.getLiveData();
+  }
+
+  @Override
+  public LiveData<List<Task>> getAllTasks() {
+    final String _sql = "SELECT * FROM task";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return new ComputableLiveData<List<Task>>() {
+      private Observer _observer;
+
+      @Override
+      protected List<Task> compute() {
+        if (_observer == null) {
+          _observer = new Observer("task") {
             @Override
             public void onInvalidated(@NonNull Set<String> tables) {
               invalidate();

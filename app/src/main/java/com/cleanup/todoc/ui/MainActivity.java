@@ -41,48 +41,29 @@ import butterknife.ButterKnife;
  * @author Gaëtan HERFRAY
  */
 public class MainActivity extends AppCompatActivity implements TasksAdapter.DeleteTaskListener {
-    /**
-     * List of all projects available in the application
-     */
-    private final List<Project> allProjects = new ArrayList<>();
 
     /**
-     * List of all current tasks of the application
+     * The adapter
      */
-    @NonNull
-    private final List<Task> tasks = new ArrayList<>();
+    private TasksAdapter adapter;
 
-    /**
-     * The adapter which handles the list of tasks
-     */
-    private final TasksAdapter adapter = new TasksAdapter(tasks, this);
-
-    /**
-     * The sort method to be used to display tasks
-     */
     @NonNull
     private SortMethod sortMethod = SortMethod.NONE;
 
     /**
-     * Dialog to create a new task
+     * Dialog
      */
     @Nullable
     public AlertDialog dialog = null;
 
-    /**
-     * EditText that allows user to set the name of a task
-     */
     @Nullable
     private EditText dialogEditText = null;
 
-    /**
-     * Spinner that allows the user to associate a project to a task
-     */
     @Nullable
     private Spinner dialogSpinner = null;
 
     /**
-     * The RecyclerView which displays the list of tasks
+     * The RecyclerView
      */
     @BindView(R.id.list_tasks)
     RecyclerView listTasks;
@@ -103,6 +84,8 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
 
         configureViewModel();
         configureRecyclerView();
+        configureObserverOfTasks();
+        configureObserverOfProjects();
 
         fab.setOnClickListener(view -> showAddTaskDialog());
     }
@@ -116,9 +99,29 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
 
     // Configure RecyclerView
     private void configureRecyclerView(){
+        adapter = new TasksAdapter(this);
         this.listTasks.setAdapter(this.adapter);
         this.listTasks.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
+
+    /**
+     * Configures the observer of Task change
+     */
+    private void configureObserverOfTasks() {
+        this.mTaskViewModel.getAllTask().observe(this, this::updateTasks);
+    }
+
+    /**
+     * Configures the observer of Project change
+     */
+    private void configureObserverOfProjects() {
+        this.mTaskViewModel.getAllProjects().observe(this, this::updateProjects);
+    }
+
+    private void updateProjects(List<Project> projects) {
+        this.adapter.updateProjects(projects);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -140,16 +143,33 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
             sortMethod = SortMethod.RECENT_FIRST;
         }
 
-        updateTasks();
+        final List<Task> newTasks = Utils.sortTasks(this.adapter.getCurrentTasks(), sortMethod);
+        this.adapter.updateListTasks(newTasks);
 
         return super.onOptionsItemSelected(item);
     }
 
+    // -- DELETE LISTENER INTERFACE OF TASKS ADAPTER --
     @Override
     public void onDeleteTask(Task task) {
-        //tasks.remove(task);
+        //use the deleteTask method of the viewModel
+        this.deleteTask(task);
+    }
+
+    /**
+     * Adds the given task to the BDD
+     * @param task the task to be added to the list
+     */
+    private void addTask(@NonNull Task task) {
+        this.mTaskViewModel.createTask(task);
+    }
+
+    /**
+     * Delete task to the BDD
+     * @param task to delete
+     */
+    private void deleteTask(Task task) {
         this.mTaskViewModel.deleteTask(task.getId());
-        updateTasks();
     }
 
     /**
@@ -206,48 +226,21 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         dialogEditText = dialog.findViewById(R.id.txt_task_name);
         dialogSpinner = dialog.findViewById(R.id.project_spinner);
 
-       Utils.populateDialogSpinner(dialogSpinner, allProjects, this);
-    }
-
-    /**
-     * Adds the given task to the list of created tasks.
-     *
-     * @param task the task to be added to the list
-     */
-    private void addTask(@NonNull Task task) {
-       this.mTaskViewModel.createTask(task);
-       // tasks.add(task);
-        updateTasks();
+       Utils.populateDialogSpinner(dialogSpinner, this, adapter);
     }
 
     /**
      * Updates the list of tasks in the UI
      */
-    private void updateTasks() {
-        //TODO
-        //tasks = mTaskViewModel.getAllTask();
+    private void updateTasks(List<Task> tasks) {
+        //if tasks is empty
         if (tasks.size() == 0) {
             lblNoTasks.setVisibility(View.VISIBLE);
             listTasks.setVisibility(View.GONE);
         } else {
             lblNoTasks.setVisibility(View.GONE);
             listTasks.setVisibility(View.VISIBLE);
-            switch (sortMethod) {
-                case ALPHABETICAL:
-                    Collections.sort(tasks, new Task.TaskAZComparator());
-                    break;
-                case ALPHABETICAL_INVERTED:
-                    Collections.sort(tasks, new Task.TaskZAComparator());
-                    break;
-                case RECENT_FIRST:
-                    Collections.sort(tasks, new Task.TaskRecentComparator());
-                    break;
-                case OLD_FIRST:
-                    Collections.sort(tasks, new Task.TaskOldComparator());
-                    break;
-
-            }
-            adapter.updateTasks(tasks);
+            adapter.updateListTasks(Utils.sortTasks(tasks, sortMethod));
         }
     }
 
@@ -281,5 +274,6 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         });
         return dialog;
     }
+
 
 }

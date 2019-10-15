@@ -23,28 +23,19 @@ import java.util.Comparator;
         childColumns = "projectId"))
 public class Task {
     /**
-     * The unique identifier of the task
+     * Fields
      */
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     private long id;
 
-    /**
-     * The unique identifier of the project associated to the task
-     */
     private long projectId;
 
-    /**
-     * The name of the task
-     */
     // Suppress warning because setName is called in constructor
     @SuppressWarnings("NullableProblems")
     @NonNull
     private String name;
 
-    /**
-     * The timestamp when the task has been created
-     */
     private long creationTimestamp;
 
     //constructors -----------------------------------------------------------------------------
@@ -66,7 +57,7 @@ public class Task {
     }
 
     /**
-     * Instantiates a new Task.
+     * Instantiates a new Task with BDD.
      * @param projectId         the unique identifier of the project associated to the task to set
      * @param name              the name of the task to set
      * @param creationTimestamp the timestamp when the task has been created to set

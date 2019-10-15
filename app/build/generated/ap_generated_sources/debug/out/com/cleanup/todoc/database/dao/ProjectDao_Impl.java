@@ -112,13 +112,14 @@ public class ProjectDao_Impl implements ProjectDao {
           final List<Project> _result = new ArrayList<Project>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final Project _item;
-            final long _tmpId;
-            _tmpId = _cursor.getLong(_cursorIndexOfId);
             final String _tmpName;
             _tmpName = _cursor.getString(_cursorIndexOfName);
             final int _tmpColor;
             _tmpColor = _cursor.getInt(_cursorIndexOfColor);
-            _item = new Project(_tmpId,_tmpName,_tmpColor);
+            _item = new Project(_tmpName,_tmpColor);
+            final long _tmpId;
+            _tmpId = _cursor.getLong(_cursorIndexOfId);
+            _item.setId(_tmpId);
             _result.add(_item);
           }
           return _result;
@@ -161,13 +162,14 @@ public class ProjectDao_Impl implements ProjectDao {
           final int _cursorIndexOfColor = _cursor.getColumnIndexOrThrow("color");
           final Project _result;
           if(_cursor.moveToFirst()) {
-            final long _tmpId;
-            _tmpId = _cursor.getLong(_cursorIndexOfId);
             final String _tmpName;
             _tmpName = _cursor.getString(_cursorIndexOfName);
             final int _tmpColor;
             _tmpColor = _cursor.getInt(_cursorIndexOfColor);
-            _result = new Project(_tmpId,_tmpName,_tmpColor);
+            _result = new Project(_tmpName,_tmpColor);
+            final long _tmpId;
+            _tmpId = _cursor.getLong(_cursorIndexOfId);
+            _result.setId(_tmpId);
           } else {
             _result = null;
           }
