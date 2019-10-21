@@ -1,20 +1,13 @@
 package com.cleanup.todoc.utils;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.cleanup.todoc.R;
 import com.cleanup.todoc.model.Project;
 import com.cleanup.todoc.model.SortMethod;
 import com.cleanup.todoc.model.Task;
-import com.cleanup.todoc.ui.MainActivity;
 import com.cleanup.todoc.ui.TasksAdapter;
 
 import java.util.Collections;
@@ -24,7 +17,7 @@ import java.util.List;
  * Created by Nelfdesign at 11/10/2019
  * com.cleanup.todoc.utils
  */
-public class Utils {
+public abstract class Utils {
     /**
      * Sets the data of the Spinner with projects to associate to a new task
      */

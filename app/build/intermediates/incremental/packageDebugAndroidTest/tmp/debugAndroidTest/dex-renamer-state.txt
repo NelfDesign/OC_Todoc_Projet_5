@@ -1,0 +1,7 @@
+#Mon Oct 21 09:39:26 CEST 2019
+base.0=F\:\\AndroidStudioProjects\\OC_todoc-master_Projet_5\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=F\:\\AndroidStudioProjects\\OC_todoc-master_Projet_5\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\out\\classes.dex

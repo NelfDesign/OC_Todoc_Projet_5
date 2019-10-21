@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModel;
 import android.support.annotation.Nullable;
 
 import com.cleanup.todoc.model.Project;
+import com.cleanup.todoc.model.SortMethod;
 import com.cleanup.todoc.model.Task;
 import com.cleanup.todoc.repositories.ProjectDataRepository;
 import com.cleanup.todoc.repositories.TaskDataRepository;
@@ -46,12 +47,12 @@ public class TaskViewModel extends ViewModel {
     }
 
     public LiveData<List<Task>> getAllTask(){
-        return mTaskDataRepository.getAllTasks() ;
+        return this.mTaskDataRepository.getAllTasks();
     }
 
     public void createTask(final Task task) {
-        mExecutor.execute(() -> {
-            mTaskDataRepository.createTask(task);
+        this.mExecutor.execute(() -> {
+            this.mTaskDataRepository.createTask(task);
         });
     }
 

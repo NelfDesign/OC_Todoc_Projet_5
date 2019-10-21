@@ -24,6 +24,15 @@ import java.util.List;
  */
 public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHolder> {
 
+    public interface DeleteTaskListener {
+        /**
+         * Called when a task needs to be deleted.
+         *
+         * @param task the task that needs to be deleted
+         */
+        void onDeleteTask(Task task);
+    }
+
     @NonNull
     private List<Task> tasks;
     private List<Project> projects;
@@ -42,6 +51,22 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
         this.deleteTaskListener = deleteTaskListener;
     }
 
+    @NonNull
+    @Override
+    public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_task, viewGroup, false);
+        return new TaskViewHolder(view, deleteTaskListener);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull TaskViewHolder taskViewHolder, int position) {
+        taskViewHolder.bind(tasks.get(position), this.projects);
+    }
+
+    @Override
+    public int getItemCount() {
+        return tasks.size();
+    }
 
     /**
      * Returns the current {@link List<Task>}
@@ -73,36 +98,6 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
 
     void updateProjects(@NonNull final List<Project> projects) {
         this.projects = projects;
-        notifyDataSetChanged();
-    }
-
-    @NonNull
-    @Override
-    public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_task, viewGroup, false);
-        return new TaskViewHolder(view, deleteTaskListener);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull TaskViewHolder taskViewHolder, int position) {
-        taskViewHolder.bind(tasks.get(position), this.projects);
-    }
-
-    @Override
-    public int getItemCount() {
-        return tasks.size();
-    }
-
-    /**
-     * Listener for deleting tasks
-     */
-    public interface DeleteTaskListener {
-        /**
-         * Called when a task needs to be deleted.
-         *
-         * @param task the task that needs to be deleted
-         */
-        void onDeleteTask(Task task);
     }
 
     /**
@@ -152,13 +147,10 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
             lblProjectName = itemView.findViewById(R.id.lbl_project_name);
             imgDelete = itemView.findViewById(R.id.img_delete);
 
-            imgDelete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    final Object tag = view.getTag();
-                    if (tag instanceof Task) {
-                        TaskViewHolder.this.deleteTaskListener.onDeleteTask((Task) tag);
-                    }
+            imgDelete.setOnClickListener(view -> {
+                final Object tag = view.getTag();
+                if (tag instanceof Task) {
+                    TaskViewHolder.this.deleteTaskListener.onDeleteTask((Task) tag);
                 }
             });
         }

@@ -1,7 +1,6 @@
 package com.cleanup.todoc.model;
 
 import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.Ignore;
@@ -13,7 +12,8 @@ import android.support.annotation.VisibleForTesting;
 import java.util.Comparator;
 
 /**
- * <p>Model for the tasks of the application.</p>
+ * Created by Nelfdesign at 11/10/2019
+ *  com.cleanup.todoc.model
  *
  * @author Gaëtan HERFRAY
  */
@@ -88,7 +88,7 @@ public class Task {
     public String getName() {
         return this.name;
     }
-    private void setName(@NonNull String name) {
+    public void setName(@NonNull String name) {
         this.name = name;
     }
 

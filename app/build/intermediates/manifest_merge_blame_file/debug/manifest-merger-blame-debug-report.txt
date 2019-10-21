@@ -15,7 +15,7 @@
 12        android:allowBackup="false"
 12-->F:\AndroidStudioProjects\OC_todoc-master_Projet_5\app\src\main\AndroidManifest.xml:7:9-36
 13        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-13-->[com.android.support:support-compat:28.0.0] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\7f1870cc5e6dd4ba48cce6a6f5fd74bc\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+13-->[com.android.support:support-compat:28.0.0] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\3674340776731d1a677541e367a97a7f\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 14        android:debuggable="true"
 15        android:icon="@mipmap/ic_launcher"
 15-->F:\AndroidStudioProjects\OC_todoc-master_Projet_5\app\src\main\AndroidManifest.xml:8:9-43
@@ -47,15 +47,15 @@
 29        </activity>
 30
 31        <provider
-31-->[android.arch.lifecycle:extensions:1.1.1] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\64e0e448143920afab55150370121fbf\extensions-1.1.1\AndroidManifest.xml:23:9-27:43
+31-->[android.arch.lifecycle:extensions:1.1.1] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\e4873c4226cdd2f228fe71bbcf59cd56\extensions-1.1.1\AndroidManifest.xml:23:9-27:43
 32            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
-32-->[android.arch.lifecycle:extensions:1.1.1] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\64e0e448143920afab55150370121fbf\extensions-1.1.1\AndroidManifest.xml:24:13-83
+32-->[android.arch.lifecycle:extensions:1.1.1] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\e4873c4226cdd2f228fe71bbcf59cd56\extensions-1.1.1\AndroidManifest.xml:24:13-83
 33            android:authorities="com.cleanup.todoc.lifecycle-trojan"
-33-->[android.arch.lifecycle:extensions:1.1.1] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\64e0e448143920afab55150370121fbf\extensions-1.1.1\AndroidManifest.xml:25:13-68
+33-->[android.arch.lifecycle:extensions:1.1.1] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\e4873c4226cdd2f228fe71bbcf59cd56\extensions-1.1.1\AndroidManifest.xml:25:13-68
 34            android:exported="false"
-34-->[android.arch.lifecycle:extensions:1.1.1] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\64e0e448143920afab55150370121fbf\extensions-1.1.1\AndroidManifest.xml:26:13-37
+34-->[android.arch.lifecycle:extensions:1.1.1] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\e4873c4226cdd2f228fe71bbcf59cd56\extensions-1.1.1\AndroidManifest.xml:26:13-37
 35            android:multiprocess="true" />
-35-->[android.arch.lifecycle:extensions:1.1.1] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\64e0e448143920afab55150370121fbf\extensions-1.1.1\AndroidManifest.xml:27:13-40
+35-->[android.arch.lifecycle:extensions:1.1.1] F:\AndroidStudioProjects\.gradle\caches\transforms-2\files-2.1\e4873c4226cdd2f228fe71bbcf59cd56\extensions-1.1.1\AndroidManifest.xml:27:13-40
 36    </application>
 37
 38</manifest>

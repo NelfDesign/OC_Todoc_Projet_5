@@ -33,8 +33,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * <p>Home activity of the application which is displayed when the user opens the app.</p>
- * <p>Displays the list of tasks.</p>
+ * Created by Nelfdesign at 11/10/2019
+ * com.cleanup.todoc.model
  *
  * @author Gaëtan HERFRAY
  */
@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
 
         configureViewModel();
         configureRecyclerView();
-        configureObserverOfTasks();
-        configureObserverOfProjects();
+        configureObserverTasks();
+        configureObserverProjects();
 
         fab.setOnClickListener(view -> showAddTaskDialog());
     }
@@ -105,21 +105,36 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
     /**
      * Configures the observer of Task change
      */
-    private void configureObserverOfTasks() {
+    private void configureObserverTasks() {
         this.mTaskViewModel.getAllTask().observe(this, this::updateTasks);
     }
 
     /**
      * Configures the observer of Project change
      */
-    private void configureObserverOfProjects() {
+    private void configureObserverProjects() {
         this.mTaskViewModel.getAllProjects().observe(this, this::updateProjects);
     }
 
-    private void updateProjects(List<Project> projects) {
+    private void updateProjects(final List<Project> projects) {
         this.adapter.updateProjects(projects);
     }
 
+    /**
+     * Updates the list of tasks in the UI
+     */
+    private void updateTasks(final List<Task> tasks) {
+        //if tasks is empty
+        if (tasks.size() == 0) {
+            lblNoTasks.setVisibility(View.VISIBLE);
+            listTasks.setVisibility(View.GONE);
+        } else {
+            lblNoTasks.setVisibility(View.GONE);
+            listTasks.setVisibility(View.VISIBLE);
+            this.adapter.updateListTasks(Utils.sortTasks(tasks, sortMethod));
+        }
+        this.adapter.updateListTasks(Utils.sortTasks(tasks, sortMethod));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -129,18 +144,22 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.filter_alphabetical) {
-            sortMethod = SortMethod.ALPHABETICAL;
-        } else if (id == R.id.filter_alphabetical_inverted) {
-            sortMethod = SortMethod.ALPHABETICAL_INVERTED;
-        } else if (id == R.id.filter_oldest_first) {
-            sortMethod = SortMethod.OLD_FIRST;
-        } else if (id == R.id.filter_recent_first) {
-            sortMethod = SortMethod.RECENT_FIRST;
+        switch (item.getItemId()) {
+            case R.id.filter_alphabetical:
+                this.sortMethod = SortMethod.ALPHABETICAL;
+                break;
+            case R.id.filter_alphabetical_inverted:
+                this.sortMethod = SortMethod.ALPHABETICAL_INVERTED;
+                break;
+            case R.id.filter_recent_first:
+                this.sortMethod = SortMethod.RECENT_FIRST;
+                break;
+            case R.id.filter_oldest_first:
+                this.sortMethod = SortMethod.OLD_FIRST;
+                break;
         }
 
+        // SORT
         final List<Task> newTasks = Utils.sortTasks(this.adapter.getCurrentTasks(), sortMethod);
         this.adapter.updateListTasks(newTasks);
 
@@ -228,49 +247,34 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
     }
 
     /**
-     * Updates the list of tasks in the UI
-     */
-    private void updateTasks(List<Task> tasks) {
-        //if tasks is empty
-        if (tasks.size() == 0) {
-            lblNoTasks.setVisibility(View.VISIBLE);
-            listTasks.setVisibility(View.GONE);
-        } else {
-            lblNoTasks.setVisibility(View.GONE);
-            listTasks.setVisibility(View.VISIBLE);
-            adapter.updateListTasks(Utils.sortTasks(tasks, sortMethod));
-        }
-    }
-
-    /**
      * Returns the dialog allowing the user to create a new task.
      *
      * @return the dialog allowing the user to create a new task
      */
      @NonNull
         private AlertDialog getAddTaskDialog() {
-        final AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this, R.style.Dialog);
+            final AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this, R.style.Dialog);
 
-        alertBuilder.setTitle(R.string.add_task);
-        alertBuilder.setView(R.layout.dialog_add_task);
-        alertBuilder.setPositiveButton(R.string.add, null);
-        alertBuilder.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialogInterface) {
-                dialogEditText = null;
-                dialogSpinner = null;
-                dialog = null;
-            }
-        });
+            alertBuilder.setTitle(R.string.add_task);
+            alertBuilder.setView(R.layout.dialog_add_task);
+            alertBuilder.setPositiveButton(R.string.add, null);
+            alertBuilder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialogInterface) {
+                    dialogEditText = null;
+                    dialogSpinner = null;
+                    dialog = null;
+                }
+            });
 
-        dialog = alertBuilder.create();
+            dialog = alertBuilder.create();
 
-        // This instead of listener to positive button in order to avoid automatic dismiss
-        dialog.setOnShowListener(dialogInterface -> {
-            Button button = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-            button.setOnClickListener(view -> MainActivity.this.onPositiveButtonClick(dialog));
-        });
-        return dialog;
+            // This instead of listener to positive button in order to avoid automatic dismiss
+            dialog.setOnShowListener(dialogInterface -> {
+                Button button = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+                button.setOnClickListener(view -> MainActivity.this.onPositiveButtonClick(dialog));
+            });
+            return dialog;
     }
 
 

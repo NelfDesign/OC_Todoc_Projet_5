@@ -10,8 +10,8 @@ import android.support.annotation.Nullable;
 import android.support.annotation.VisibleForTesting;
 
 /**
- * <p>Models for project in which tasks are included.</p>
- *
+ * Created by Nelfdesign at 11/10/2019
+ * com.cleanup.todoc.model
  * @author Gaëtan HERFRAY
  */
 @Entity(tableName = "project")
