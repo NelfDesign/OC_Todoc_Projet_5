@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/NelfDesign/OC_Todoc_Projet_5.svg?branch=master)](https://travis-ci.org/NelfDesign/OC_Todoc_Projet_5)
 # OC_Todoc_Projet_5
   This is a project for organize tasks for different custumers. We have to use a BDD to save the tasks.
 
