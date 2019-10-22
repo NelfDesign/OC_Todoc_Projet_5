@@ -1,5 +1,6 @@
 package com.cleanup.todoc.ui;
 
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
     private TasksAdapter adapter;
 
     @NonNull
-    private SortMethod sortMethod = SortMethod.NONE;
+    private SortMethod sortMethod;
 
     /**
      * Dialog
@@ -85,6 +87,13 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         configureObserverTasks();
         configureObserverProjects();
 
+      /* if (this.sortMethod == null){
+          this.sortMethod = SortMethod.NONE;
+        }else {
+           configureSorts();
+       }*/
+      if (sortMethod != null) Log.i("Sorts on create", sortMethod.toString());
+
         fab.setOnClickListener(view -> showAddTaskDialog());
     }
 
@@ -93,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         ViewModelFactory mViewModelFactory = Injection.provideViewModelFactory(this);
         this.mTaskViewModel = ViewModelProviders.of(this, mViewModelFactory).get(TaskViewModel.class);
         this.mTaskViewModel.init();
+        this.sortMethod = this.mTaskViewModel.getSort();
     }
 
     // Configure RecyclerView
@@ -106,7 +116,12 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
      * Configures the observer of Task change
      */
     private void configureObserverTasks() {
-        this.mTaskViewModel.getAllTask().observe(this, this::updateTasks);
+        this.mTaskViewModel.getAllTask().observe(this, new Observer<List<Task>>() {
+            @Override
+            public void onChanged(@Nullable List<Task> tasks) {
+                updateTasks(tasks);
+            }
+        });
     }
 
     /**
@@ -116,8 +131,18 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         this.mTaskViewModel.getAllProjects().observe(this, this::updateProjects);
     }
 
+    private void configureSorts() {
+        this.mTaskViewModel.updateSortMethod(sortMethod).observe(this, this::updateSorts);
+        Log.i("Sorts LiveData", sortMethod.toString());
+    }
+
     private void updateProjects(final List<Project> projects) {
         this.adapter.updateProjects(projects);
+    }
+
+    private void updateSorts(SortMethod sorts){
+        this.sortMethod = sorts;
+        Log.i("Sorts update", sortMethod.toString());
     }
 
     /**
@@ -133,7 +158,6 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
             listTasks.setVisibility(View.VISIBLE);
             this.adapter.updateListTasks(Utils.sortTasks(tasks, sortMethod));
         }
-        this.adapter.updateListTasks(Utils.sortTasks(tasks, sortMethod));
     }
 
     @Override
@@ -147,15 +171,23 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         switch (item.getItemId()) {
             case R.id.filter_alphabetical:
                 this.sortMethod = SortMethod.ALPHABETICAL;
+                updateSorts(this.sortMethod);
+                configureSorts();
                 break;
             case R.id.filter_alphabetical_inverted:
                 this.sortMethod = SortMethod.ALPHABETICAL_INVERTED;
+                updateSorts(this.sortMethod);
+                configureSorts();
                 break;
             case R.id.filter_recent_first:
                 this.sortMethod = SortMethod.RECENT_FIRST;
+                updateSorts(sortMethod);
+                configureSorts();
                 break;
             case R.id.filter_oldest_first:
                 this.sortMethod = SortMethod.OLD_FIRST;
+                updateSorts(sortMethod);
+                configureSorts();
                 break;
         }
 

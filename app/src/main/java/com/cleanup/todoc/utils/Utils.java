@@ -2,6 +2,7 @@ package com.cleanup.todoc.utils;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -34,10 +35,12 @@ public abstract class Utils {
     /**
      * Sorts the {@link List< Task >} in argument and returns it
      * @param tasks a {@link List<Task>}
+     * @param sortMethod a {@link SortMethod}
      * @return the {@link List<Task>} but sorted
      */
     @NonNull
-    public static List<Task> sortTasks(@NonNull final List<Task> tasks, SortMethod sortMethod) {
+    public static List<Task> sortTasks(@NonNull final List<Task> tasks,@NonNull SortMethod sortMethod) {
+        if (sortMethod == null) sortMethod = SortMethod.NONE;
         if (tasks.size()!= 0) {
             switch (sortMethod) {
                 case ALPHABETICAL:

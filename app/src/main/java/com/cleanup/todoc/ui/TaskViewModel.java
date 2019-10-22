@@ -1,8 +1,10 @@
 package com.cleanup.todoc.ui;
 
 import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.cleanup.todoc.model.Project;
 import com.cleanup.todoc.model.SortMethod;
@@ -27,6 +29,7 @@ public class TaskViewModel extends ViewModel {
     //DATA
     @Nullable
     private LiveData<List<Project>> projects;
+    private MutableLiveData<SortMethod> sorts = new MutableLiveData<>();
 
     public TaskViewModel(ProjectDataRepository projectDataRepository, TaskDataRepository taskDataRepository, Executor executor) {
         this.mProjectDataRepository = projectDataRepository;
@@ -70,5 +73,19 @@ public class TaskViewModel extends ViewModel {
 
     public LiveData<List<Project>> getAllProjects(){
         return this.projects;
+    }
+
+    public LiveData<SortMethod> updateSortMethod(SortMethod s){
+        sorts.setValue(s);
+        Log.i("Sorts VM", sorts.getValue().toString());
+        return this.sorts;
+    }
+
+    public SortMethod getSort(){
+        if (sorts == null){
+            sorts.setValue(SortMethod.NONE);
+            return sorts.getValue();
+        }
+        return sorts.getValue();
     }
 }
