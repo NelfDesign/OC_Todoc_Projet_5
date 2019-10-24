@@ -75,7 +75,7 @@ public class MainActivityInstrumentedTest {
         MainActivity activity = rule.getActivity();
         RecyclerView listTasks = activity.findViewById(R.id.list_tasks);
         int countList = listTasks.getAdapter().getItemCount();
-        for (int i = 0; i < countList; i++){
+        for (int i = 0 ; i < countList; i++){
             onView(withId(R.id.list_tasks)).perform(RecyclerViewActions.actionOnItemAtPosition(i, new DeleteViewAction()));
         }
 
