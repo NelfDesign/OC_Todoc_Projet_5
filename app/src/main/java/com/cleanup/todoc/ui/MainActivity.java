@@ -1,6 +1,5 @@
 package com.cleanup.todoc.ui;
 
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -42,17 +41,12 @@ import butterknife.ButterKnife;
  */
 public class MainActivity extends AppCompatActivity implements TasksAdapter.DeleteTaskListener {
 
-    /**
-     * The adapter
-     */
+    // FIELDS
     private TasksAdapter adapter;
 
     @NonNull
     private SortMethod sortMethod;
 
-    /**
-     * Dialog
-     */
     @Nullable
     public AlertDialog dialog = null;
 
@@ -62,9 +56,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
     @Nullable
     private Spinner dialogSpinner = null;
 
-    /**
-     * The RecyclerView
-     */
+    //The RecyclerView
     @BindView(R.id.list_tasks)
     RecyclerView listTasks;
     @BindView(R.id.lbl_no_task)
@@ -72,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
     @BindView(R.id.fab_add_task)
     FloatingActionButton fab;
 
-    // 1 - FOR DATA
+    //FOR DATA
     private TaskViewModel mTaskViewModel;
 
     @Override
@@ -84,65 +76,56 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
 
         configureViewModel();
         configureRecyclerView();
-        configureObserverTasks();
-        configureObserverProjects();
-
-      /* if (this.sortMethod == null){
-          this.sortMethod = SortMethod.NONE;
-        }else {
-           configureSorts();
-       }*/
-      if (sortMethod != null) Log.i("Sorts on create", sortMethod.toString());
+        configureObserverViewModel();
 
         fab.setOnClickListener(view -> showAddTaskDialog());
     }
 
-    // Configuring ViewModel
+    /*-------------------------------------------------------------------------------------
+                        UI configuration
+     -------------------------------------------------------------------------------------*/
+    // Configure ViewModel
     private void configureViewModel(){
         ViewModelFactory mViewModelFactory = Injection.provideViewModelFactory(this);
         this.mTaskViewModel = ViewModelProviders.of(this, mViewModelFactory).get(TaskViewModel.class);
         this.mTaskViewModel.init();
         this.sortMethod = this.mTaskViewModel.getSort();
     }
-
     // Configure RecyclerView
     private void configureRecyclerView(){
         adapter = new TasksAdapter(this);
         this.listTasks.setAdapter(this.adapter);
         this.listTasks.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
-
-    /**
-     * Configures the observer of Task change
-     */
-    private void configureObserverTasks() {
-        this.mTaskViewModel.getAllTask().observe(this, new Observer<List<Task>>() {
-            @Override
-            public void onChanged(@Nullable List<Task> tasks) {
-                updateTasks(tasks);
-            }
-        });
-    }
-
-    /**
-     * Configures the observer of Project change
-     */
-    private void configureObserverProjects() {
+    //configure the observer for BDD change
+    private void configureObserverViewModel(){
+        //Configures the observer of Task change
+        this.mTaskViewModel.getAllTask().observe(this, tasks -> updateTasks(tasks));
+        //Configures the observer of Project change
         this.mTaskViewModel.getAllProjects().observe(this, this::updateProjects);
     }
-
+    //configure observer for sortMethod change
     private void configureSorts() {
         this.mTaskViewModel.updateSortMethod(sortMethod).observe(this, this::updateSorts);
         Log.i("Sorts LiveData", sortMethod.toString());
     }
-
+    /*---------------------------------------------------------------------------------------
+                            Method for the viewModel observer
+     ---------------------------------------------------------------------------------------*/
+    /**
+     * Method to mean adapter project change
+     * @param projects {@link List<Project>}
+     */
     private void updateProjects(final List<Project> projects) {
         this.adapter.updateProjects(projects);
     }
 
+    /**
+     * Method to update SortMethod field
+     * @param sorts {@link SortMethod}
+     */
     private void updateSorts(SortMethod sorts){
         this.sortMethod = sorts;
-        Log.i("Sorts update", sortMethod.toString());
     }
 
     /**
@@ -160,6 +143,10 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         }
     }
 
+    /*--------------------------------------------------------------------------------------------
+                                     MENU
+     *-------------------------------------------------------------------------------------------
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.actions, menu);
@@ -198,13 +185,16 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         return super.onOptionsItemSelected(item);
     }
 
-    // -- DELETE LISTENER INTERFACE OF TASKS ADAPTER --
+    // -- DELETE LISTENER INTERFACE OF TASKS ADAPTER ------------------------------------------
     @Override
     public void onDeleteTask(Task task) {
         //use the deleteTask method of the viewModel
         this.deleteTask(task);
     }
 
+    /*---------------------------------------------------------------------------------------
+                             BDD method called with viewModel
+     ----------------------------------------------------------------------------------------*/
     /**
      * Adds the given task to the BDD
      * @param task the task to be added to the list
@@ -265,9 +255,9 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         }
     }
 
-    /**
-     * Shows the Dialog for adding a Task
-     */
+   /*----------------------------------------------------------------------------------------
+                                 DIALOG
+    ----------------------------------------------------------------------------------------*/
     private void showAddTaskDialog() {
         final AlertDialog dialog = this.getAddTaskDialog();
         dialog.show();
@@ -308,6 +298,5 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
             });
             return dialog;
     }
-
 
 }

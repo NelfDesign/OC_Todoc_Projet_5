@@ -164,7 +164,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
         void bind(Task task, List<Project> projects) {
             lblTaskName.setText(task.getName());
             imgDelete.setTag(task);
-            // PROJECT (First id = 1 and not 0)
+            // PROJECT BDD (First id = 1 and not 0)
             final long projectId = task.getProjectId();
             final Project taskProject = projects.get((int)projectId - 1);
 
