@@ -31,12 +31,21 @@ public class TaskViewModel extends ViewModel {
     private LiveData<List<Project>> projects;
     private MutableLiveData<SortMethod> sorts = new MutableLiveData<>();
 
+    /**
+     * Constructor
+     * @param projectDataRepository
+     * @param taskDataRepository
+     * @param executor
+     */
     public TaskViewModel(ProjectDataRepository projectDataRepository, TaskDataRepository taskDataRepository, Executor executor) {
         this.mProjectDataRepository = projectDataRepository;
         this.mTaskDataRepository = taskDataRepository;
         this.mExecutor = executor;
     }
 
+    /**
+     * Initialise the project list for demo
+     */
     public void init() {
         // PROJECTS
         if (this.projects == null) {
@@ -44,7 +53,14 @@ public class TaskViewModel extends ViewModel {
         }
     }
 
-    // task
+    /************************************************************************************
+     *                                   CRUD task
+     * *********************************************************************************/
+    /**
+     * get one task
+     * @param taskId
+     * @return the task whose id = taskid
+     */
     public LiveData<List<Task>> getTask(long taskId){
         return mTaskDataRepository.getTask(taskId) ;
     }
@@ -71,10 +87,16 @@ public class TaskViewModel extends ViewModel {
         });
     }
 
+    /********************************************************************************
+     *  getter for project
+     * *****************************************************************************/
     public LiveData<List<Project>> getAllProjects(){
         return this.projects;
     }
 
+    /********************************************************************************
+     *   SortMethod to listen the modification
+     *******************************************************************************/
     public LiveData<SortMethod> updateSortMethod(SortMethod s){
         sorts.setValue(s);
         Log.i("Sorts VM", sorts.getValue().toString());

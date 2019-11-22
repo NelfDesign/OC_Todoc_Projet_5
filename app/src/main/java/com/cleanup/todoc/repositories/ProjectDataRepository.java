@@ -23,11 +23,19 @@ public class ProjectDataRepository {
 
     // --- GET ---
 
+    /**
+     * Get one project with his Id
+     * @param projectId
+     * @return
+     */
     public LiveData<Project> getProject(long projectId){
         return this.mProjectDao.getProject(projectId);
     }
 
-
+    /**
+     * get all projects
+     * @return
+     */
     public LiveData<List<Project>> getProjects() {
         return this.mProjectDao.getProjects();
     }

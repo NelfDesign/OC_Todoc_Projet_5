@@ -145,8 +145,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
 
     /*--------------------------------------------------------------------------------------------
                                      MENU
-     *-------------------------------------------------------------------------------------------
-     */
+     -------------------------------------------------------------------------------------------*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.actions, menu);
@@ -177,7 +176,6 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
                 configureSorts();
                 break;
         }
-
         // SORT
         final List<Task> newTasks = Utils.sortTasks(this.adapter.getCurrentTasks(), sortMethod);
         this.adapter.updateListTasks(newTasks);

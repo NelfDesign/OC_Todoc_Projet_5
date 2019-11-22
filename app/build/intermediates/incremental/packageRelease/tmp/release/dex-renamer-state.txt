@@ -1,0 +1,4 @@
+#Sat Oct 26 09:02:05 CEST 2019
+base.0=F\:\\AndroidStudioProjects\\OC_todoc-master_Projet_5\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

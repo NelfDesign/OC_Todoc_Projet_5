@@ -21,12 +21,24 @@ public class ViewModelFactory implements ViewModelProvider.Factory {
     private final TaskDataRepository mTaskDataRepository;
     private final Executor mExecutor;
 
+    /**
+     * Constructor
+     * @param projectDataRepository
+     * @param taskDataRepository
+     * @param executor
+     */
     public ViewModelFactory(ProjectDataRepository projectDataRepository, TaskDataRepository taskDataRepository, Executor executor) {
         this.mProjectDataRepository = projectDataRepository;
         this.mTaskDataRepository = taskDataRepository;
         this.mExecutor = executor;
     }
 
+    /**
+     *
+     * @param modelClass
+     * @param <T>
+     * @return ViewModel
+     */
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {

@@ -31,7 +31,11 @@ public abstract class TodocDatabase extends RoomDatabase {
     //Field
     private static Project[] projects = Project.getAllProjects();
 
-    //Instance
+    /**
+     * Create an instance if null or return it
+     * @param context
+     * @return
+     */
     public static TodocDatabase getInstance(Context context){
         if (INSTANCE == null) {
             synchronized (TodocDatabase.class) {
@@ -46,6 +50,10 @@ public abstract class TodocDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
+    /**
+     * Usesto populate the DB
+     * @return DB with values
+     */
     private static Callback prepopulateDatabase() {
         return new Callback() {
 
