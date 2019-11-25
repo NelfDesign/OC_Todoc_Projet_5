@@ -16,7 +16,7 @@ import java.util.concurrent.Executor;
  */
 public class ViewModelFactory implements ViewModelProvider.Factory {
 
-    //fields viewmodel
+    //fields viewModel
     private final ProjectDataRepository mProjectDataRepository;
     private final TaskDataRepository mTaskDataRepository;
     private final Executor mExecutor;
